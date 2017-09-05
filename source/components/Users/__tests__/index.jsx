@@ -38,19 +38,83 @@ describe('mount component', () => {
   });
 
   it('should pass', async () => {
-    // jest.setTimeout(1000);
     await sleep;
 
     console.log(wrapper.debug());
+    
+    /*
+    <Provider store={{...}}>
+        <Connect(Users)>
+          <Users users={{...}} actions={{...}}>
+            <article className="Users">
+              <button disabled={false} onClick={[Function]} type="button" className="Users__more">
+                more
+              </button>
+            </article>
+          </Users>
+        </Connect(Users)>
+      </Provider>
+    */
+    
     console.log(store.getActions());
+    
+    /*
+    [ { type: 'GET_LIST_REQUEST' },
+        { type: 'GET_LIST_SUCCESS',
+          payload: { page: 1, per_page: 5, total: 12, total_pages: 3, data: [Array] } } ]
+    */
+    
     console.log(store.getState());
+    
+    /*
+    { Users: 
+         { loading: false,
+           currentPage: 0,
+           pageCount: Infinity,
+           totalCount: Infinity,
+           perPage: 5,
+           data: [] } }
+    */
 
     wrapper.update();
     await sleep;
 
     console.log(wrapper.debug());
+    
+    /*
+    <Provider store={{...}}>
+        <Connect(Users)>
+          <Users users={{...}} actions={{...}}>
+            <article className="Users">
+              <button disabled={false} onClick={[Function]} type="button" className="Users__more">
+                more
+              </button>
+            </article>
+          </Users>
+        </Connect(Users)>
+      </Provider>
+    */
+    
     console.log(store.getActions());
+    
+    /*
+    [ { type: 'GET_LIST_REQUEST' },
+        { type: 'GET_LIST_SUCCESS',
+          payload: { page: 1, per_page: 5, total: 12, total_pages: 3, data: [Array] } } ]
+    */
+    
     console.log(store.getState());
+    
+    /*
+    { Users: 
+         { loading: false,
+           currentPage: 0,
+           pageCount: Infinity,
+           totalCount: Infinity,
+           perPage: 5,
+           data: [] } }
+    */
+    
     expect(1).toBe(1);
   });
 });
