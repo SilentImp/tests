@@ -1,0 +1,88 @@
+{
+  "name": "testshort2",
+  "version": "1.0.0",
+  "description": "Test scaffolder 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack && http-server ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:TemplateMonster/PlasmaPlatform/Frontend/Test/testShort2.git"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "enzyme": "^2.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "html-webpack-plugin": "^2.30.1",
+    "isomorphic-fetch": "^2.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "postcss-clean": "^1.0.3",
+    "postcss-discard-empty": "^2.1.0",
+    "postcss-import": "^10.0.0",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-svg": "^2.1.0",
+    "precss": "^2.0.0",
+    "pug": "^2.0.0-rc.3",
+    "pug-loader": "^2.3.0",
+    "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-test-renderer": "^15.6.1",
+    "redux": "^3.6.0",
+    "redux-mock-store": "^1.2.3",
+    "redux-thunk": "^2.2.0",
+    "style-loader": "^0.18.2",
+    "stylelint": "^7.11.1",
+    "webpack": "^2.6.1"
+  },
+  "jest": {
+    "browser": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "!**/reducers/index.js",
+      "!**/__mocks__/**",
+      "!**/__tests__/**",
+      "**/actions/**.js",
+      "**/reducers/**.js",
+      "**/components/**"
+    ],
+    "moduleNameMapper": {
+      "config.js": "<rootDir>/config/application.production.js",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|po)$": "<rootDir>/__mocks__/fileMock.js",
+      "^.+\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "moduleFileExtensions": [
+      "jsx",
+      "js",
+      "json"
+    ]
+  },
+  "author": "Anton Nemtsev <thesilentimp@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nock": "^9.0.14",
+    "stylelint-config-standard": "^17.0.0"
+  }
+}

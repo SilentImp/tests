@@ -1,0 +1,48 @@
+{
+  "syntax": "less",
+  "extends": "stylelint-config-standard",
+  "rules": {
+    # Use soft tabs (2 spaces) for indentation
+    "indentation": 2,
+    # Prefer dashes over camelCasing in class names.
+    # Underscores and PascalCasing are okay if you are using BEM
+    # "selector-class-pattern": "^(_)?[a-z]+-[a-z0-9-]+((_{2}|-{2})?[a-z0-9-]+)?(-{2}[a-z0-9-]+)?[a-z0-9]$",
+    # Do not use ID selectors
+    # "selector-no-id": true,
+    # When using multiple selectors in a rule declaration, give each selector its own line.
+    "selector-list-comma-newline-before": "never-multi-line",
+    "selector-list-comma-newline-after": "always",
+    "selector-list-comma-space-before": "never",
+    "selector-list-comma-space-after": "always-single-line",
+    # Put a space before the opening brace { in rule declarations
+    "block-opening-brace-space-before": "always",
+    # In properties, put a space after, but not before, the : character.
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always-single-line",
+    # Put closing braces } of rule declarations on a new line
+    "block-closing-brace-newline-before": "always",
+    "block-closing-brace-newline-after": "always",
+    # Put blank lines between rule declarations
+    # ?
+    # Prefer line comments (// in Sass-land) to block comments.
+    # ?
+    # Prefer comments on their own line. Avoid end-of-line comments.
+    "comment-empty-line-before": "always",
+    # Use 0 instead of none to specify that a style has no border.
+    # ?
+    # Order your regular CSS and @include declarations logicall
+    # ?
+    # Do not nest selectors more than three levels deep!
+    # "selector-max-compound-selectors": 3,
+    # Some custom adds
+    "number-leading-zero": "never",
+    "declaration-empty-line-before": "never",
+    "at-rule-empty-line-before": ["always", {
+      "except": [
+        "inside-block",
+        "blockless-after-same-name-blockless",
+      ]
+    }],
+    "property-no-unknown": true
+  },
+}
